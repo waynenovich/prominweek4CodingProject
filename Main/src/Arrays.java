@@ -121,7 +121,7 @@ public class Arrays {
 
     //PART TEN--------------------------------------------------------------------------------------------------
         //Double Array Returns.
-        double[] valuesDouble = {10.5, 20.0, 30.5, 40.0, 50.5};  //Creates an double Array with 5 values.
+        double[] valuesDouble = {doubleRND(), doubleRND(), doubleRND(), doubleRND(), doubleRND()};  //Creates an double Array with 5 values.
 
         double averageDouble = calculateAverage(valuesDouble);  //Calls to the method "calculateAverage".
         System.out.println("Average of the array: " + averageDouble);  //Displays results to terminal.
@@ -138,7 +138,7 @@ public class Arrays {
         double moneyInPocket = doubleRND(); //Establish a double with a value of random.
 
         // Call the method and print the result
-        boolean result12 = shouldDrink(isHotOutside, moneyInPocket); //Calls to the method "shouldDrink".
+        boolean result12 = willBuyDrink(isHotOutside, moneyInPocket); //Calls to the method "willBuyDrink".
         System.out.println("Should I buy a drink? " + result12); //Displays to the terminal.
         //Result 12 is only there to keep this result from other ones.
     }
@@ -202,7 +202,7 @@ public class Arrays {
     }
 
     //METHOD FOR PART TWELVE
-    public static boolean shouldDrink(boolean isHotOutside, double moneyInPocket) {
+    public static boolean willBuyDrink(boolean isHotOutside, double moneyInPocket) {
         return isHotOutside && moneyInPocket > 10.50;  // Return true if both conditions are met
     }
 
@@ -219,4 +219,20 @@ public class Arrays {
         double randDUB = random.nextDouble() * 20.0; 
         return randDUB;
     }
+     /* For question 13 I was asked to "13. Create a method of your own that solves
+        a problem. In comments, write what the method does and why you created it.". 
+        I decided that I was already having a practical problem with showing how the
+        values could change through the other questions but still show a working output.
+        I could type out many arrays but that felt like it would come off as sloppy.
+        I knew random was a thing but had never tried to figure it out without looking it up.
+        I started messing around with the random code and discovered Math.random but that gives
+        any number. Which sounds good but some questions only want integers and others doubles.
+        I figured out how to lock the Math.random to a set value to ensure it works within
+         reasonable grounds for my code. This solves question 13 and makes two methods that ensure dynamicness
+         with all other necessary methods. 
+         */
+
+
+        //Wayne Novich
+
 }
